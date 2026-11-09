@@ -1,0 +1,65 @@
+# Conky Windows
+# Right-click the panel, or its tray icon, for the menu.
+# Save this file and the panel reloads on its own.
+#
+# alignment: top_left, top_right, top_middle, bottom_left, bottom_right,
+#            bottom_middle, middle_left, middle_right, middle_middle, none
+# own_window_type: normal, desktop (paint on the wallpaper), dock (always on top)
+# click_through: yes hides the panel from the mouse. Turn it off from the tray icon.
+
+alignment top_right
+gap_x 28
+gap_y 52
+minimum_width 300
+maximum_width 380
+update_interval 1
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_value 214
+own_window_colour 17171A
+own_window_type dock
+draw_shades yes
+draw_outline no
+draw_borders yes
+border_width 1
+border_color 3A3A3E
+default_shade_color 000000
+font Segoe UI:size=14
+default_color F2F2F7
+color1 64D2FF
+color2 8E8E93
+color3 30D158
+color4 FF9F0A
+border_inner_margin 16
+corner_radius 18
+line_spacing 2
+short_units yes
+top_name_width 18
+click_through no
+
+TEXT
+${font Segoe UI:size=20}${color}${nodename}
+${font}${color2}${sysname}
+${color2}Uptime${alignr}${color}${uptime}
+${color2}${time %A}${alignr}${color}${time %H:%M}
+${voffset 8}${color1}CPU ${hr 1}
+${color}${cpu}%${alignr}${color2}${freq_g}
+${voffset 4}${color1}${cpubar 5}
+${voffset 5}${color1}${cpugraph 28 64D2FF 30D158}
+${voffset 8}${color1}MEMORY ${hr 1}
+${color2}RAM${alignr}${color}${memperc}%  ${mem} / ${memmax}
+${voffset 4}${color3}${membar 5}
+${color2}Swap${alignr}${color}${swap} / ${swapmax}
+${voffset 8}${color1}DISK ${hr 1}
+${color2}System${alignr}${color}${fs_used /} / ${fs_size /}
+${voffset 4}${color4}${fs_bar 5 /}
+${voffset 8}${color1}NETWORK ${hr 1}
+${color2}${iface}${alignr}${color}${addr}
+${color2}Down${alignr}${color}${downspeed}
+${color2}Up${alignr}${color}${upspeed}
+${voffset 4}${color1}${downspeedgraph 24 64D2FF 30D158}
+${voffset 8}${color1}PROCESSES ${hr 1}
+${color2}${top name 1}${alignr}${color}${top cpu 1}%
+${color2}${top name 2}${alignr}${color}${top cpu 2}%
+${color2}${top name 3}${alignr}${color}${top cpu 3}%
+${voffset 8}${color2}Power${alignr}${color}${battery}
