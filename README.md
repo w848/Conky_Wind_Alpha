@@ -14,7 +14,7 @@ Or, from this folder:
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 pushd ..
-Conky_Windows\.venv\Scripts\python.exe -m Conky_Windows --config Conky_Windows\conkyrc
+Conky_Wind_Alpha\.venv\Scripts\python.exe -m Conky_Wind_Alpha --config Conky_Wind_Alpha\conkyrc
 popd
 ```
 
